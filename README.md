@@ -160,4 +160,10 @@ newline         = "\n" | "\r\n" ;
 ## Comments for Implementers
 
 - Implementers should not support single quotes instead of double quotes for labels. (May choose to use `'` symbol later.)
-- Implementers may choose to support 𝄆 and 𝄇 unicode symbols 
+- Implementers may choose to support 𝄆 and 𝄇 unicode symbols
+- Annotations should not be used for indicating timing.
+
+## Comments for Renderers
+
+- Prefix annotations should be rendered either before or above the content they are labeling. Suffix annotations should be rendered either after or below.
+- Do not render barres. They are not explicitly described in the v0.1 but may be added later on.

@@ -71,13 +71,13 @@ Identifiers are **string labels**, not pitch classes.
 Two equivalent forms:
 
 * Named-string: `<fret><string>` (e.g., `5e`, `0A`)
-* Indexed-string: `<fret>/<idx>` where `idx` is `1..N` under the header
+* Indexed-string: `<fret>@<idx>` where `idx` is `1..N` under the header
 
 Simultaneous notes use `+`:
 
 ```catl
 {eBGDAE} 0A 0D 5e 7B 3e+0D
-{eBGDAE} 0/5 0/4 5/1 7/2 3/1+0/4
+{eBGDAE} 0@5 0@4 5@1 7@2 3@1+0@4
 ```
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/0046c686-7dbc-4edb-9c1d-6349948265a1" />
@@ -135,7 +135,7 @@ event-group     = event { "+" event } ;
 event           = named-event | indexed-event ;
 
 named-event     = fret string-id ;
-indexed-event   = fret "/" string-index ;
+indexed-event   = fret "@" string-index ;
 
 fret            = digit { digit } ;
 string-index    = digit { digit } ;      (* semantic: 1..N *)
@@ -162,6 +162,7 @@ newline         = "\n" | "\r\n" ;
 - Implementers should not support single quotes instead of double quotes for labels. (May choose to use `'` symbol later.)
 - Implementers may choose to support 𝄆 and 𝄇 unicode symbols
 - Annotations should not be used for indicating timing.
+- The '/' character and `~` character are reserved.
 
 ## Comments for Renderers
 

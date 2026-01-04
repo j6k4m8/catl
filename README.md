@@ -1,8 +1,15 @@
-# CATL — Short Spec (v0.1)
+# CATL
 
 CATL is a compact text notation format for **chord voicings** and **tab events** on guitar and other stringed instruments.
 
+|  |  |
+|--|--|
+| Parser (node.js) | https://github.com/j6k4m8/catl-parser |
+| Render SVGs | https://github.com/j6k4m8/catl-render |
+
 ---
+
+# Short Spec (v0.1)
 
 ## Comments / Whitespace
 
